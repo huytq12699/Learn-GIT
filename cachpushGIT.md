@@ -11,8 +11,10 @@ git push -u origin main
 # Đối với trường hợp đã tạo repo
 
 ```sh
-git remote add origin https://github.com/huytq12699/Learn-GIT.git
+git add .
 git branch -M main
 git commit -m "first commit"
 git push -u origin main
 ```
+
+"huydz"
