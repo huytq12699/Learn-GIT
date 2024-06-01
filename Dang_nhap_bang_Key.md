@@ -28,79 +28,88 @@ SSH Key gồm 3 thành phần sau:
 
 ## 5. Cách tạo SSH Key trong Termius trên hệ điều hành Windows
 
-- B1: 
+### Bước 1:
+
 ![](./image/a1.png)
 
-	+ Mở Termius.
++ Mở Termius.
 
-	+ Click vào biểu tượng `Setting` góc trái phía trên màn hình. 
++ Click vào biểu tượng `Setting` góc trái phía trên màn hình. 
 
-	+ Chọn `Keychain`.
++ Chọn `Keychain`.
 	
-	+ Trỏ vào phần mũi tên xuống cạnh `Key` => chọn `Generate Key`.
++ Trỏ vào phần mũi tên xuống cạnh `Key` => chọn `Generate Key`.
 
-- B2: 
+### Bước 2:
+
 ![](./image/a2.png)
 
-	+ Điền tên khóa vào `Label`. 
++ Điền tên khóa vào `Label`. 
 
-	+ Chọn `Key type`, ở đây chọn `RSA`.
++ Chọn `Key type`, ở đây chọn `RSA`.
 
-	+ Chọn `Key size`, ở đây chọn `2048` bits.
++ Chọn `Key size`, ở đây chọn `2048` bits.
 
-	+ Phần `Passphrase`, đặt pass cho Private Key(tùy thích), nhưng lời khuyên nên điền để khi đăng nhập sẽ bắt nhập mật khẩu của file Private Key.
++ Phần `Passphrase`, đặt pass cho Private Key(tùy thích), nhưng lời khuyên nên điền để khi đăng nhập sẽ bắt nhập mật khẩu của file Private Key.
 	
-	+ Sau đó, ấn `Generate & save`.
++ Sau đó, ấn `Generate & save`.
 
-- B3: 
+### Bước 3:
+
 ![](./image/a3.png)
 
-Nó sẽ tạo ra đoạn mã ngẫu nhiên của cặp khóa Public-Private. Lưu lại đoạn mã Private Key vào một file nào đó, ví dụ như: notepad,…
++ Nó sẽ tạo ra đoạn mã ngẫu nhiên của cặp khóa Public-Private. Lưu lại đoạn mã Private Key vào một file nào đó, ví dụ như: notepad,…
 
 ![](./image/a5.png)
 
-Sau đó, ấn `Export to host`.
++ Sau đó, ấn `Export to host`.
 
-- B4: 
+### Bước 4:
+
 ![](./image/a6.png)
 
-	+ Ta điền `địa chỉ IP` của Server vào trong ô hoặc Click vào phần `Select Host` ở bên cạnh để chọn Server đăng nhập bằng Key.
++ Ta điền `địa chỉ IP` của Server vào trong ô hoặc Click vào phần `Select Host` ở bên cạnh để chọn Server đăng nhập bằng Key.
 
-	+ Ở đây, khóa Public Key đã được Termius lưu trong `/root/.ssh/authorized_keys` của Server mà ta đã chọn ở phần `Host`.
++ Ở đây, khóa Public Key đã được Termius lưu trong `/root/.ssh/authorized_keys` của Server mà ta đã chọn ở phần `Host`.
 
-	+ Sau đó, ấn `Export and Attach` để hoàn thành việc thiết lập.
++ Sau đó, ấn `Export and Attach` để hoàn thành việc thiết lập.
 
 ## 6. SSH vào Server bằng Key
 
-- B1:
+### Bước 1:
+
 ![](./image/dn1.png)
 
 Ta điền `Host` hoặc gõ `ssh username@hostname` muốn đăng nhập vào ô trống, sau đó ấn `Connect` để đăng nhập.
 
-- B2:
+### Bước 2:
+
 ![](./image/dn2.png)
 
 Điền Username vào ô trống, sau đó ấn `Continue & Save` để tiếp tục.
 
-- B3:
+### Bước 3:
+
 ![](./image/dn3.png) 
 
 Ở đây ta chọn đăng nhập `Public Key`, sau đó `kéo và thả` file Private Key vào ô trống hoặc ấn `Import` file Private Key đã lưu trong máy tính cá nhân. 
 
 Lưu ý, định dạng file Private key phải lưu ở đuôi `.ppk` thì mới hợp lệ.
 
-- B4:
+### Bước 4:
+
 ![](./image/dn4.png)
 
 Nếu ta đặt mật khẩu cho Private Key khi thiết lập khóa ở `B2, mục 5 trước đó` thì sẽ phải điền để đăng nhập vào server. Sau đó, ấn “Continue & Save”. 
 Còn không đặt mật khẩu cho khóa bí mật thì sẽ đăng nhập vào thẳng server.
 
-- B5:
+### Bước 5:
+
 ![](./image/dn5.png)
 
 Kết quả,ta đã đăng nhập thành công vào Server bằng cặp khóa PB-PR Key trong Termius.
 
-# 7. Kết luận
+## 7. Tổng kết
 
 Như vậy, qua phần trình bày ở trên, tôi đã giới thiệu cho các bạn cách đăng nhập SSH bằng Key trong Termius trên hệ điều hành Windows.
 
